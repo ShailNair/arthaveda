@@ -2,6 +2,7 @@
 Auth Router — Register, Login, Verify Email, Refresh, Logout
 Security: rate limiting, MX validation, bcrypt passwords, JWT + refresh tokens.
 """
+import os
 from fastapi import APIRouter, Request, Response, HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
@@ -56,12 +57,14 @@ def _ip(request: Request) -> str:
     return (forwarded.split(",")[0] if forwarded else request.client.host) or "unknown"
 
 
+_IS_PROD = os.getenv("RAILWAY_ENVIRONMENT") is not None or os.getenv("ENV", "dev") == "prod"
+
 def _set_refresh_cookie(response: Response, token: str):
     response.set_cookie(
         key=COOKIE_NAME, value=token,
-        httponly=True,      # not accessible from JS
-        secure=False,       # set True in production (HTTPS)
-        samesite="lax",
+        httponly=True,
+        secure=_IS_PROD,          # must be True for SameSite=none
+        samesite="none" if _IS_PROD else "lax",   # none = cross-domain works
         max_age=COOKIE_MAX_AGE,
         path="/api/auth",
     )
