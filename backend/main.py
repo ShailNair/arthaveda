@@ -95,22 +95,33 @@ async def job_lottery_scan():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    init_db()   # ensure user DB tables exist
-    print("=== Indian Market Lottery Advisor - Starting ===")
+    try:
+        init_db()   # ensure user DB tables exist
+    except Exception as e:
+        print(f"[Boot] DB init warning: {e}")
 
-    scheduler.add_job(job_market_overview, "interval", seconds=90, id="mkt")
-    scheduler.add_job(job_geo_intel, "interval", minutes=10, id="geo")
-    scheduler.add_job(
-        job_lottery_scan, "interval", minutes=20, id="scan",
-        next_run_time=datetime.now() + timedelta(minutes=3)
-    )
-    scheduler.start()
-    print("[Boot] Scheduler started. Lottery scan in 3 min.")
-    print("[Boot] Server: http://localhost:8000  |  Docs: http://localhost:8000/docs")
+    print("=== Arthaveda Market Intelligence - Starting ===")
+
+    try:
+        scheduler.add_job(job_market_overview, "interval", seconds=90, id="mkt")
+        scheduler.add_job(job_geo_intel, "interval", minutes=10, id="geo")
+        scheduler.add_job(
+            job_lottery_scan, "interval", minutes=20, id="scan",
+            next_run_time=datetime.now() + timedelta(minutes=5)
+        )
+        scheduler.start()
+        print("[Boot] Scheduler started.")
+    except Exception as e:
+        print(f"[Boot] Scheduler warning: {e}")
+
+    print("[Boot] Server ready.")
 
     yield
 
-    scheduler.shutdown()
+    try:
+        scheduler.shutdown()
+    except Exception:
+        pass
     executor.shutdown(wait=False)
     print("[Shutdown] Done")
 
