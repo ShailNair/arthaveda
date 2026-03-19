@@ -137,6 +137,7 @@ _ORIGINS = [o.strip() for o in _RAW_ORIGINS.split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_ORIGINS,
+    allow_origin_regex=r"https://arthaveda.*\.vercel\.app",
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
 
