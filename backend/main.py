@@ -128,7 +128,10 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Indian Market Lottery Advisor", version="1.0.0", lifespan=lifespan)
 
-_RAW_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000")
+_RAW_ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:3000,http://127.0.0.1:3000,https://arthaveda.vercel.app"
+)
 _ORIGINS = [o.strip() for o in _RAW_ORIGINS.split(",") if o.strip()]
 
 app.add_middleware(
