@@ -835,27 +835,23 @@ export default function WealthPage() {
         <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 4 }}>Your personal investment plan</p>
       </div>
 
-      {/* Not logged in */}
-      {!user ? (
-        <>
-          <div style={{
-            background: 'var(--surface)', border: '1px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '24px 26px',
-            display: 'flex', flexDirection: 'column', gap: 12,
-          }}>
-            <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-primary)' }}>Build your personalized wealth plan</div>
-            <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-              Sign in to create a plan tuned to your goal, timeline, and risk comfort.
-              We'll pick funds, show projections, and update advice as markets change.
-            </p>
-            <div style={{ display: 'flex', gap: 10, marginTop: 4 }}>
-              <Link href="/login" className="btn btn-primary" style={{ textDecoration: 'none' }}>Sign in</Link>
-              <Link href="/register" className="btn btn-ghost" style={{ textDecoration: 'none' }}>Create account</Link>
-            </div>
-          </div>
-          <DemoPreview />
-        </>
-      ) : step === 'setup' ? (
+      {/* Guest banner — non-blocking, shown only when not signed in */}
+      {!user && (
+        <div style={{
+          background: 'rgba(255,159,10,0.08)', border: '1px solid rgba(255,159,10,0.25)',
+          borderRadius: 'var(--radius)', padding: '10px 14px',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap',
+        }}>
+          <span style={{ fontSize: 13, color: 'var(--amber)' }}>
+            👤 Guest mode — your plan won&apos;t be saved between sessions.
+          </span>
+          <Link href="/register" style={{ fontSize: 12, fontWeight: 600, color: 'var(--amber)', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            Create free account →
+          </Link>
+        </div>
+      )}
+
+      {step === 'setup' ? (
         /* Step 1 */
         <GoalSetup
           onComplete={async params => {
