@@ -1,0 +1,111 @@
+{
+  "DEFENCE": {
+    "stocks": [
+      {"symbol": "HAL.NS", "name": "Hindustan Aeronautics"},
+      {"symbol": "BEL.NS", "name": "Bharat Electronics"},
+      {"symbol": "BHARATFORG.NS", "name": "Bharat Forge"},
+      {"symbol": "MTAR.NS", "name": "MTAR Technologies"},
+      {"symbol": "PARAS.NS", "name": "Paras Defence"},
+      {"symbol": "COCHINSHIP.NS", "name": "Cochin Shipyard"},
+      {"symbol": "MAZDOCK.NS", "name": "Mazagon Dock"},
+      {"symbol": "BEML.NS", "name": "BEML Limited"}
+    ],
+    "keywords": ["defence", "defense", "military", "army", "navy", "airforce", "weapon", "missile", "war", "conflict", "border tension", "combat"]
+  },
+  "ENERGY_OIL": {
+    "stocks": [
+      {"symbol": "ONGC.NS", "name": "ONGC"},
+      {"symbol": "RELIANCE.NS", "name": "Reliance Industries"},
+      {"symbol": "BPCL.NS", "name": "BPCL"},
+      {"symbol": "HPCL.NS", "name": "HPCL"},
+      {"symbol": "IOC.NS", "name": "Indian Oil"},
+      {"symbol": "GAIL.NS", "name": "GAIL India"}
+    ],
+    "keywords": ["oil", "crude", "petroleum", "opec", "energy crisis", "fuel", "gas pipeline", "sanctions oil"]
+  },
+  "RENEWABLE_ENERGY": {
+    "stocks": [
+      {"symbol": "WAAREEENER.NS", "name": "Waaree Energies"},
+      {"symbol": "NTPC.NS", "name": "NTPC"},
+      {"symbol": "ADANIGREEN.NS", "name": "Adani Green Energy"},
+      {"symbol": "SJVN.NS", "name": "SJVN"},
+      {"symbol": "SUZLON.NS", "name": "Suzlon Energy"},
+      {"symbol": "INOXWIND.NS", "name": "Inox Wind"}
+    ],
+    "keywords": ["solar", "renewable", "clean energy", "green energy", "wind energy", "climate agreement", "paris accord", "net zero", "carbon", "cop"]
+  },
+  "PHARMA": {
+    "stocks": [
+      {"symbol": "SUNPHARMA.NS", "name": "Sun Pharmaceutical"},
+      {"symbol": "DIVISLAB.NS", "name": "Divi's Laboratories"},
+      {"symbol": "LAURUSLABS.NS", "name": "Laurus Labs"},
+      {"symbol": "GRANULES.NS", "name": "Granules India"},
+      {"symbol": "AUROPHARMA.NS", "name": "Aurobindo Pharma"},
+      {"symbol": "DRREDDY.NS", "name": "Dr Reddy's"},
+      {"symbol": "CIPLA.NS", "name": "Cipla"}
+    ],
+    "keywords": ["pharma", "api", "drug", "medicine", "pandemic", "health crisis", "fda", "us pharma", "china pharma", "generic drug"]
+  },
+  "IT_TECH": {
+    "stocks": [
+      {"symbol": "TCS.NS", "name": "TCS"},
+      {"symbol": "INFY.NS", "name": "Infosys"},
+      {"symbol": "WIPRO.NS", "name": "Wipro"},
+      {"symbol": "HCLTECH.NS", "name": "HCL Technologies"},
+      {"symbol": "TECHM.NS", "name": "Tech Mahindra"},
+      {"symbol": "LTIM.NS", "name": "LTIMindtree"}
+    ],
+    "keywords": ["technology", "semiconductor", "chips act", "tech war", "digital", "software", "it services", "cybersecurity", "ai", "artificial intelligence"]
+  },
+  "MANUFACTURING": {
+    "stocks": [
+      {"symbol": "DIXON.NS", "name": "Dixon Technologies"},
+      {"symbol": "KAYNES.NS", "name": "Kaynes Technology"},
+      {"symbol": "AMBER.NS", "name": "Amber Enterprises"},
+      {"symbol": "SYRMA.NS", "name": "Syrma SGS"},
+      {"symbol": "TATAMOTORS.NS", "name": "Tata Motors"}
+    ],
+    "keywords": ["manufacturing", "china+1", "supply chain", "pli scheme", "make in india", "factory", "production", "trade war", "tariff"]
+  },
+  "INFRASTRUCTURE": {
+    "stocks": [
+      {"symbol": "LT.NS", "name": "Larsen & Toubro"},
+      {"symbol": "KEC.NS", "name": "KEC International"},
+      {"symbol": "KALPATPOWR.NS", "name": "Kalpataru"},
+      {"symbol": "PNCINFRA.NS", "name": "PNC Infratech"},
+      {"symbol": "ADANIPORTS.NS", "name": "Adani Ports"},
+      {"symbol": "GMRINFRA.NS", "name": "GMR Airports"}
+    ],
+    "keywords": ["infrastructure", "port", "highway", "airport", "railway", "corridor", "imec", "connectivity", "project", "tender"]
+  },
+  "BANKING": {
+    "stocks": [
+      {"symbol": "HDFCBANK.NS", "name": "HDFC Bank"},
+      {"symbol": "ICICIBANK.NS", "name": "ICICI Bank"},
+      {"symbol": "SBIN.NS", "name": "State Bank of India"},
+      {"symbol": "AXISBANK.NS", "name": "Axis Bank"},
+      {"symbol": "KOTAKBANK.NS", "name": "Kotak Mahindra Bank"}
+    ],
+    "keywords": ["banking", "interest rate", "rbi", "monetary policy", "rate cut", "rate hike", "credit", "npa", "finance"]
+  },
+  "GOLD_COMMODITIES": {
+    "stocks": [
+      {"symbol": "GOLDBEES.NS", "name": "Nippon India Gold ETF"},
+      {"symbol": "NMDC.NS", "name": "NMDC"},
+      {"symbol": "COALINDIA.NS", "name": "Coal India"},
+      {"symbol": "HINDALCO.NS", "name": "Hindalco"},
+      {"symbol": "TATASTEEL.NS", "name": "Tata Steel"}
+    ],
+    "keywords": ["gold", "commodity", "inflation", "dollar", "currency war", "sanctions", "metal", "steel", "iron ore", "de-dollarization"]
+  },
+  "AGRICULTURE": {
+    "stocks": [
+      {"symbol": "UPL.NS", "name": "UPL Limited"},
+      {"symbol": "COROMANDEL.NS", "name": "Coromandel International"},
+      {"symbol": "PIIND.NS", "name": "PI Industries"},
+      {"symbol": "DHANUKA.NS", "name": "Dhanuka Agritech"},
+      {"symbol": "CHAMBALFERT.NS", "name": "Chambal Fertilizers"}
+    ],
+    "keywords": ["agriculture", "food crisis", "fertilizer", "crop", "famine", "food security", "wheat", "grain", "agri"]
+  }
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "china_plus_one",
+    "title": "China+1 Manufacturing Shift",
+    "description": "Global companies reducing China dependence, India is #1 beneficiary",
+    "plain_explanation": "Big global companies like Apple, Samsung are moving factories from China to India. This means Indian electronic and manufacturing companies will get huge orders worth thousands of crores in next 3-5 years. Early investors in these companies can make 3x-10x returns.",
+    "trigger_events": ["US-China trade war", "COVID supply chain disruption", "Taiwan tensions", "Apple India manufacturing"],
+    "top_stocks": [
+      {"symbol": "DIXON.NS", "name": "Dixon Technologies", "why": "India's largest electronics manufacturer, Apple supplier"},
+      {"symbol": "KAYNES.NS", "name": "Kaynes Technology", "why": "Fast growing electronics manufacturing"},
+      {"symbol": "AMBER.NS", "name": "Amber Enterprises", "why": "AC components, Samsung supplier"}
+    ],
+    "top_funds": [
+      {"name": "Mirae Asset Large & Midcap Fund", "category": "Manufacturing theme"},
+      {"name": "ICICI Pru Manufacturing Fund", "category": "Manufacturing theme"}
+    ],
+    "time_horizon_years": "3-5 years",
+    "confidence": 88,
+    "suggested_approach": "Invest monthly SIP for 12-18 months to average your buy price. Don't invest all at once.",
+    "category": "Manufacturing"
+  },
+  {
+    "id": "india_defence_boom",
+    "title": "India Defence Self-Reliance",
+    "description": "India targeting 75% domestic defence production by 2027, ₹6 lakh Cr budget",
+    "plain_explanation": "India is spending massive money on building its own weapons, aircraft, ships instead of buying from abroad. This directly benefits Indian defence companies. Every global conflict (Russia-Ukraine, Middle East) also boosts this sector. These stocks can double in 2-3 years.",
+    "trigger_events": ["Russia-Ukraine war", "India-China border tensions", "Atmanirbhar Bharat", "Defence export push"],
+    "top_stocks": [
+      {"symbol": "HAL.NS", "name": "Hindustan Aeronautics", "why": "Makes Tejas fighter jets, helicopters for Indian Air Force"},
+      {"symbol": "BEL.NS", "name": "Bharat Electronics", "why": "Radar, communication systems, massive order book"},
+      {"symbol": "MAZDOCK.NS", "name": "Mazagon Dock", "why": "Makes submarines and warships for Indian Navy"}
+    ],
+    "top_funds": [
+      {"name": "HDFC Defence Fund", "category": "Sectoral - Defence"},
+      {"name": "Mirae Asset Defence Fund", "category": "Sectoral - Defence"}
+    ],
+    "time_horizon_years": "2-4 years",
+    "confidence": 91,
+    "suggested_approach": "Can invest lump sum during market dips. Hold for at least 2 years.",
+    "category": "Defence"
+  },
+  {
+    "id": "india_solar_boom",
+    "title": "India Solar Energy Revolution",
+    "description": "India target 500GW solar by 2030, global green energy commitments driving massive investment",
+    "plain_explanation": "India has committed to produce 500 units of solar power by 2030 (currently at 80). Every budget allocates thousands of crores. Global climate agreements force every country to buy solar. Indian solar companies that supply this will see explosive growth in orders.",
+    "trigger_events": ["COP28 climate agreement", "G20 renewable commitments", "India PLI solar scheme", "Global fossil fuel phase-out"],
+    "top_stocks": [
+      {"symbol": "WAAREEENER.NS", "name": "Waaree Energies", "why": "India's largest solar panel maker, exporting to US/Europe"},
+      {"symbol": "NTPC.NS", "name": "NTPC Green", "why": "Govt-backed, safest solar bet, massive project pipeline"},
+      {"symbol": "SUZLON.NS", "name": "Suzlon Energy", "why": "Wind energy turnaround story, debt cleared"}
+    ],
+    "top_funds": [
+      {"name": "DSP Natural Resources and New Energy Fund", "category": "Energy theme"},
+      {"name": "ICICI Pru Energy Opportunities Fund", "category": "Energy theme"}
+    ],
+    "time_horizon_years": "3-6 years",
+    "confidence": 85,
+    "suggested_approach": "Monthly SIP recommended. Green energy can be volatile short term but very strong long term.",
+    "category": "Energy"
+  },
+  {
+    "id": "pharma_china_decoupling",
+    "title": "Global Pharma API Decoupling from China",
+    "description": "US & Europe reducing pharma dependence on China, India is world's pharmacy",
+    "plain_explanation": "America and Europe realized they depend too much on China for medicines (API = raw material for drugs). They want Indian pharma companies to supply instead. India already makes 20% of world's generic medicines. This demand will grow 3x in coming years.",
+    "trigger_events": ["COVID showed China pharma risk", "US BIOSECURE Act", "EU pharma strategy", "Geopolitical tensions with China"],
+    "top_stocks": [
+      {"symbol": "DIVISLAB.NS", "name": "Divi's Laboratories", "why": "World's largest API manufacturer for several drugs"},
+      {"symbol": "LAURUSLABS.NS", "name": "Laurus Labs", "why": "Fast growing API + finished formulations"},
+      {"symbol": "SUNPHARMA.NS", "name": "Sun Pharma", "why": "India's largest pharma, strong US presence"}
+    ],
+    "top_funds": [
+      {"name": "SBI Healthcare Opportunities Fund", "category": "Sectoral - Pharma"},
+      {"name": "Mirae Asset Healthcare Fund", "category": "Sectoral - Pharma"}
+    ],
+    "time_horizon_years": "2-5 years",
+    "confidence": 82,
+    "suggested_approach": "SIP in pharma fund or buy individual stocks in 3 installments over 3 months.",
+    "category": "Pharma"
+  },
+  {
+    "id": "india_infra_push",
+    "title": "India's ₹111 Lakh Crore Infrastructure Push",
+    "description": "Govt of India building highways, railways, ports, airports at unprecedented scale",
+    "plain_explanation": "India is building the biggest infrastructure in its history - new highways, bullet trains, airports, ports. This creates massive business for construction companies, engineering firms, and cement companies. These companies will have guaranteed work for next 10 years.",
+    "trigger_events": ["National Infrastructure Pipeline", "PM Gati Shakti", "Budget infrastructure spend", "Smart Cities Mission"],
+    "top_stocks": [
+      {"symbol": "LT.NS", "name": "L&T", "why": "India's largest construction company, gets biggest contracts"},
+      {"symbol": "KEC.NS", "name": "KEC International", "why": "Power transmission, railways - huge order book"},
+      {"symbol": "ADANIPORTS.NS", "name": "Adani Ports", "why": "Largest port operator, expansion across India"}
+    ],
+    "top_funds": [
+      {"name": "HDFC Infrastructure Fund", "category": "Sectoral - Infrastructure"},
+      {"name": "Canara Robeco Infrastructure Fund", "category": "Sectoral - Infrastructure"}
+    ],
+    "time_horizon_years": "3-7 years",
+    "confidence": 87,
+    "suggested_approach": "Long term SIP. Infrastructure is slow but very steady. Ideal for 5+ year investors.",
+    "category": "Infrastructure"
+  }
+]

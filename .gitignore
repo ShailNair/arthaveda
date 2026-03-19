@@ -1,0 +1,34 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+.venv/
+*.sqlite
+*.db
+
+# ── Backend secrets ───────────────────────────────────────
+backend/.env
+
+# ── Node / Next.js ────────────────────────────────────────
+node_modules/
+.next/
+out/
+.vercel/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── OS ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
