@@ -9,8 +9,10 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from typing import Set
 
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+import re
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from routers import market, alerts, geopolitical, funds, predictions, analytics, auth, user
@@ -132,14 +134,54 @@ _RAW_ORIGINS = os.getenv(
     "ALLOWED_ORIGINS",
     "http://localhost:3000,http://127.0.0.1:3000,https://arthaveda.vercel.app"
 )
-_ORIGINS = [o.strip() for o in _RAW_ORIGINS.split(",") if o.strip()]
+_STATIC_ORIGINS: set = {o.strip() for o in _RAW_ORIGINS.split(",") if o.strip()}
+_ORIGIN_RE = re.compile(r"^https://arthaveda[a-zA-Z0-9\-]*\.vercel\.app$")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=_ORIGINS,
-    allow_origin_regex=r"https://arthaveda.*\.vercel\.app",
-    allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
-)
+def _cors_origin(origin: str) -> str | None:
+    """Return the origin to echo back, or None if not allowed."""
+    if not origin:
+        return None
+    if origin in _STATIC_ORIGINS:
+        return origin
+    if _ORIGIN_RE.match(origin):
+        return origin
+    if origin.startswith("http://localhost") or origin.startswith("http://127.0.0.1"):
+        return origin
+    return None
+
+_CORS_HEADERS = {
+    "Access-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type,Authorization,Cookie,X-Requested-With",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Max-Age": "86400",
+}
+
+@app.middleware("http")
+async def cors_middleware(request: Request, call_next):
+    origin = request.headers.get("origin", "")
+    allowed = _cors_origin(origin)
+
+    # Handle preflight
+    if request.method == "OPTIONS":
+        headers = {**_CORS_HEADERS}
+        if allowed:
+            headers["Access-Control-Allow-Origin"] = allowed
+        return JSONResponse(status_code=200, content=None, headers=headers)
+
+    try:
+        response = await call_next(request)
+    except Exception as exc:
+        headers = {"Access-Control-Allow-Origin": allowed or "*",
+                   "Access-Control-Allow-Credentials": "true"}
+        return JSONResponse(status_code=500,
+                            content={"detail": str(exc)},
+                            headers=headers)
+
+    if allowed:
+        response.headers["Access-Control-Allow-Origin"] = allowed
+        response.headers["Access-Control-Allow-Credentials"] = "true"
+        response.headers["Vary"] = "Origin"
+    return response
 
 app.include_router(market.router)
 app.include_router(alerts.router)
